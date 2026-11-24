@@ -22,8 +22,14 @@ Open http://localhost:8080. Use HTTP rather than opening `index.html` directly, 
 
 - `index.html`: paper text, authors, resource placeholders, figures, and citation.
 - `style.css`: page and responsive layout.
-- `app.js`: scene selection and image/prediction comparison.
+- `app.js`: scene selection and paired input/output comparison, with a prediction/ground-truth switch.
 - `scenes.json`: scene manifest and frozen model provenance.
 - `assets/`: public figures, observations, predictions, and thumbnails.
 
 The interactive gallery uses the frozen 150k DPT model with normal-loss weight 0.1, selected by minimum validation RMSE at epoch 60. The original teaser is explicitly separate and uses an earlier checkpoint. The arXiv/code links and citation remain placeholders until publication details are available.
+
+## Demo scenes
+
+Three GeomSat test scenes with aligned LiDAR ground truth: residential towers, dense urban blocks, and forest canopy. Each panel is capped at 400 CSS pixels for 512-pixel source images. The output switches between prediction and ground truth with the same 0–60 m square-root viridis scale.
+
+Scene selection uses reference heights only: at least 80% valid ground truth, at least 20% of valid pixels above 5 m, and at least 5% above 10 m. It does not rank prediction accuracy. The previous mostly low-lying bridge scene and examples without aligned ground truth are excluded. Exact selection criteria, statistics, and checkpoint hashes are in `scenes.json`.
