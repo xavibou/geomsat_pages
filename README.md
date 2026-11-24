@@ -36,7 +36,7 @@ The demo shows eight native large-area mosaics, each approximately 800 m per sid
 - Collioure, Rochefort, Arcachon, and La Baule, from France test sites.
 - Ordinary urban areas in Libreville, Dakar, and Tehran, avoiding the Eiffel/Azadi Tower examples.
 
-Dakar is the default scene. All eight demo examples are broader-area mosaics. Rio, Paris residential, forest canopy, residential towers, and dense urban close-ups are excluded from the demo. Click either panel to open its full-resolution PNG. The paper teaser is retained.
+Rochefort is the default scene. All eight demo examples are broader-area mosaics. Rio, Paris residential, forest canopy, residential towers, and dense urban close-ups are excluded from the demo. Click either panel to open its full-resolution PNG. The paper teaser is retained.
 
 ## Native tiling and provenance
 

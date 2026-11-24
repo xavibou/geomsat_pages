@@ -20,6 +20,25 @@
   },
   "scenes": [
     {
+      "id": "mosaic_rochefort",
+      "title": "Rochefort \u00b7 urban neighbourhood",
+      "region": "France",
+      "kind": "mosaic",
+      "groundTruthAvailable": false,
+      "nativeWidth": 1664,
+      "nativeHeight": 1664,
+      "approximateSideM": 829.9,
+      "splitStatus": "pre-training test site",
+      "sourceWindowSha256": "637d5bb10cc00c61d1f6af44cbb43a8c35222f13c97082ffe44a884c752833d8",
+      "sourceAssetSha256": "2e70c6621385b07aeb1ac674e1137bc89390d2bb6d6e3e0ceef89eec6414c711",
+      "tileSize": 512,
+      "tileStride": 384,
+      "tileCount": 16,
+      "rgb": "assets/mosaic_rochefort-rgb.png",
+      "height": "assets/mosaic_rochefort-height.png",
+      "thumbnail": "assets/mosaic_rochefort-thumb.webp"
+    },
+    {
       "id": "mosaic_dakar",
       "title": "Dakar \u00b7 urban neighbourhood",
       "region": "Senegal",
@@ -56,25 +75,6 @@
       "rgb": "assets/mosaic_france_residential-rgb.png",
       "height": "assets/mosaic_france_residential-height.png",
       "thumbnail": "assets/mosaic_france_residential-thumb.webp"
-    },
-    {
-      "id": "mosaic_rochefort",
-      "title": "Rochefort \u00b7 urban neighbourhood",
-      "region": "France",
-      "kind": "mosaic",
-      "groundTruthAvailable": false,
-      "nativeWidth": 1664,
-      "nativeHeight": 1664,
-      "approximateSideM": 829.9,
-      "splitStatus": "pre-training test site",
-      "sourceWindowSha256": "637d5bb10cc00c61d1f6af44cbb43a8c35222f13c97082ffe44a884c752833d8",
-      "sourceAssetSha256": "2e70c6621385b07aeb1ac674e1137bc89390d2bb6d6e3e0ceef89eec6414c711",
-      "tileSize": 512,
-      "tileStride": 384,
-      "tileCount": 16,
-      "rgb": "assets/mosaic_rochefort-rgb.png",
-      "height": "assets/mosaic_rochefort-height.png",
-      "thumbnail": "assets/mosaic_rochefort-thumb.webp"
     },
     {
       "id": "mosaic_arcachon",
