@@ -11,13 +11,19 @@ function loadImage(src) {
 }
 async function selectScene(scene) {
   requested = scene;
-  const current = ++revision, currentOutput = output;
+  const current = ++revision, currentOutput = scene.groundTruthAvailable ? output : 'height';
   $('#comparison').setAttribute('aria-busy', 'true');
   $('#gallery-status').textContent = '';
   try {
     await Promise.all([loadImage(scene.rgb), loadImage(scene[currentOutput])]);
     if (current !== revision) return;
     selected = scene;
+    output = currentOutput;
+    $('#comparison').classList.toggle('large-area', scene.kind === 'mosaic');
+    $('#output-controls').hidden = !scene.groundTruthAvailable;
+    $('#output-label').hidden = !!scene.groundTruthAvailable;
+    $('#input-full').href = scene.rgb;
+    $('#output-full').href = scene[currentOutput];
     $('#observation').src = scene.rgb;
     $('#observation').alt = `Satellite image: ${scene.title}`;
     $('#prediction').src = scene[currentOutput];

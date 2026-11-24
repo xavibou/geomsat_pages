@@ -30,6 +30,21 @@ The interactive gallery uses the frozen 150k DPT model with normal-loss weight 0
 
 ## Demo scenes
 
-Three GeomSat test scenes with aligned LiDAR ground truth: residential towers, dense urban blocks, and forest canopy. Each panel is capped at 400 CSS pixels for 512-pixel source images. The output switches between prediction and ground truth with the same 0–60 m square-root viridis scale.
+The demo shows ten native large-area mosaics, each approximately 800 m per side:
 
-Scene selection uses reference heights only: at least 80% valid ground truth, at least 20% of valid pixels above 5 m, and at least 5% above 10 m. It does not rank prediction accuracy. The previous mostly low-lying bridge scene and examples without aligned ground truth are excluded. Exact selection criteria, statistics, and checkpoint hashes are in `scenes.json`.
+- Ordinary Paris neighbourhoods (two areas).
+- Collioure, Rochefort, Arcachon, and La Baule, from France test sites.
+- Rio de Janeiro: the Maracanã area from the teaser.
+- Ordinary urban areas in Libreville, Dakar, and Tehran, avoiding the Eiffel/Azadi Tower examples.
+
+The three original ground-truth test crops remain available at the end of the thumbnail strip. Their output can switch between prediction and aligned LiDAR ground truth. Mosaics have no aligned full-area GT, so they show prediction only. Click an image to open its full-resolution PNG.
+
+## Native tiling and provenance
+
+Large regions are read from original sensor-image products at native resolution. Product-window offsets are verified against the saved dataset crops for exact pixel equality. Image extent is chosen using adjusted RPC pixel geometry, giving roughly 800 m per side, comparable to the Rio teaser area. No image upscaling is used.
+
+Inference uses overlapping 512 × 512 tiles at 384 px stride with the frozen 150k DPT model, normal-loss weight 0.1, selected by minimum validation RMSE at epoch 60. Positive cosine feathering merges heights in the original image coordinates. RGB display stretch is calculated once over the entire region. No GT height fitting or prediction scale alignment is performed. All outputs share a 0–60 m square-root viridis display scale.
+
+Four non-Paris France mosaics are verified members of the pre-training test split. Some Paris/world scenes are pre-training train/validation sites; these illustrative examples are not claimed as geographically unseen evaluations. Exact image sizes, approximate extents, acquisition split status, tile counts, and model/source hashes are recorded in `scenes.json`. The original teaser uses an earlier checkpoint.
+
+The three retained GT crops were selected using reference heights only: >=80% valid ground truth, >=20% of valid heights above 5 m, and >=5% above 10 m. Selection does not rank prediction accuracy.

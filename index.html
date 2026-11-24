@@ -20,11 +20,11 @@
 <figure><a href="assets/teaser.png" target="_blank" rel="noopener"><img src="assets/teaser.png" width="1800" height="823" alt="Paper teaser: reconstructed surfaces, satellite input views, and predicted heights for the Arc de Triomphe in Paris and Maracanã Stadium in Rio de Janeiro"></a><figcaption>Monocular height predictions and multiview surface reconstructions for the Arc de Triomphe, Paris, and Maracanã Stadium, Rio de Janeiro. The original teaser uses an earlier checkpoint than the interactive examples below.</figcaption></figure>
 </section>
 <section id="explore" class="explore-section"><div class="wrap">
-<div class="section-heading"><h2>Monocular height estimation</h2><p>Select a GeomSat test scene to compare the satellite image with its predicted height.</p></div>
+<div class="section-heading"><h2>Monocular height estimation</h2><p>Select an urban area to compare its satellite image and predicted height. Click either panel to view it at full resolution.</p></div>
 <div id="thumbnails" class="filmstrip" aria-label="Select a test scene"><p>Loading test scenes…</p></div>
 <div id="comparison" class="comparison-panels">
-<figure class="demo-panel"><figcaption>Satellite image</figcaption><img id="observation" width="512" height="512" alt="Satellite observation"></figure>
-<figure class="demo-panel"><figcaption><div class="output-switch" role="group" aria-label="Height output"><button data-output="height" class="active" aria-pressed="true">Prediction</button><button data-output="groundTruth" aria-pressed="false">Ground truth</button></div></figcaption><img id="prediction" width="512" height="512" alt="Predicted height"></figure>
+<figure class="demo-panel"><figcaption>Satellite image</figcaption><a id="input-full" target="_blank" rel="noopener" title="Open full-resolution satellite image"><img id="observation" width="512" height="512" alt="Satellite observation"></a></figure>
+<figure class="demo-panel"><figcaption><span id="output-label">Predicted height</span><div id="output-controls" class="output-switch" role="group" aria-label="Height output" hidden><button data-output="height" class="active" aria-pressed="true">Prediction</button><button data-output="groundTruth" aria-pressed="false">Ground truth</button></div></figcaption><a id="output-full" target="_blank" rel="noopener" title="Open full-resolution height map"><img id="prediction" width="512" height="512" alt="Predicted height"></a></figure>
 </div>
 <div id="height-legend" class="height-legend"><p>Height above ground (m)</p><div class="height-gradient"></div><div class="legend-ticks"><span>0</span><span>5</span><span>15</span><span>30</span><span>60+</span></div></div>
 <p id="gallery-status" class="gallery-status" role="status" aria-live="polite"></p>
