@@ -36,9 +36,7 @@ The demo shows eight native large-area mosaics, each approximately 800 m per sid
 - Collioure, Rochefort, Arcachon, and La Baule, from France test sites.
 - Ordinary urban areas in Libreville, Dakar, and Tehran, avoiding the Eiffel/Azadi Tower examples.
 
-The two ground-truth test crops remain available at the end of the thumbnail strip. Their output can switch between prediction and aligned LiDAR ground truth. Mosaics have no aligned full-area GT, so they show prediction only. Click an image to open its full-resolution PNG.
-
-Dakar is the default scene. The Rio, Paris residential, and forest-canopy demo examples are excluded. The paper teaser is retained.
+Dakar is the default scene. All eight demo examples are broader-area mosaics. Rio, Paris residential, forest canopy, residential towers, and dense urban close-ups are excluded from the demo. Click either panel to open its full-resolution PNG. The paper teaser is retained.
 
 ## Native tiling and provenance
 
@@ -47,5 +45,3 @@ Large regions are read from original sensor-image products at native resolution.
 Inference uses overlapping 512 × 512 tiles at 384 px stride with the frozen 150k DPT model, normal-loss weight 0.1, selected by minimum validation RMSE at epoch 60. Positive cosine feathering merges heights in the original image coordinates. RGB display stretch is calculated once over the entire region. No GT height fitting or prediction scale alignment is performed. All outputs share a 0–60 m square-root viridis display scale.
 
 Four non-Paris France mosaics are verified members of the pre-training test split. Some Paris/world scenes are pre-training train/validation sites; these illustrative examples are not claimed as geographically unseen evaluations. Exact image sizes, approximate extents, acquisition split status, tile counts, and model/source hashes are recorded in `scenes.json`. The original teaser uses an earlier checkpoint.
-
-The two retained GT crops were selected using reference heights only: >=80% valid ground truth, >=20% of valid heights above 5 m, and >=5% above 10 m. Selection does not rank prediction accuracy.

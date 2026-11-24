@@ -14,12 +14,9 @@
     "teaser": "Separate historical figure, not the checkpoint used by the interactive gallery."
   },
   "selection": {
-    "source": "Existing GeomSat test examples with aligned LiDAR ground truth",
-    "minimumValidFraction": 0.8,
-    "minimumFractionAbove5m": 0.2,
-    "minimumFractionAbove10m": 0.05,
-    "mosaics": "Ordinary urban areas selected geographically and reviewed in RGB; about 800m per side. Native 512px inference with positive cosine overlap blending. Some areas are pre-training train/validation sites and are not claimed held out. No aligned GT is supplied for mosaic regions.",
-    "criterion": "Ground-truth coverage and height only; not prediction quality."
+    "source": "Geographically selected large urban regions reviewed in RGB",
+    "mosaics": "About 800m per side. Native 512px inference with positive cosine overlap blending. Some areas are pre-training train/validation sites and are not claimed held out. No aligned GT is supplied for mosaic regions.",
+    "criterion": "Geographic and RGB review; not prediction quality."
   },
   "scenes": [
     {
@@ -173,40 +170,6 @@
       "rgb": "assets/mosaic_paris_north-rgb.png",
       "height": "assets/mosaic_paris_north-height.png",
       "thumbnail": "assets/mosaic_paris_north-thumb.webp"
-    },
-    {
-      "id": "geo_tall_01_460385",
-      "title": "Residential towers",
-      "region": "France",
-      "size": 512,
-      "sourceAssetSha256": "d2ea2fa445539689dd756b53f664f70a4c0dd87a2bf3eef86f7a194a3bbb12b2",
-      "groundTruthAvailable": true,
-      "referenceStatistics": {
-        "validFraction": 0.8555335998535156,
-        "fractionAbove5m": 0.2675400070449854,
-        "fractionAbove10m": 0.15094549945824953
-      },
-      "rgb": "assets/geo_tall_01_460385-rgb.png",
-      "height": "assets/geo_tall_01_460385-height.png",
-      "groundTruth": "assets/geo_tall_01_460385-groundTruth.png",
-      "thumbnail": "assets/geo_tall_01_460385-thumb.webp"
-    },
-    {
-      "id": "geo_mixed_00_500402",
-      "title": "Dense urban blocks",
-      "region": "France",
-      "size": 512,
-      "sourceAssetSha256": "d57f5feefc94b2974e6ba9b1ad7a64ee26ed3576c218239affa21f0cdd06f177",
-      "groundTruthAvailable": true,
-      "referenceStatistics": {
-        "validFraction": 0.9230766296386719,
-        "fractionAbove5m": 0.48569503965220123,
-        "fractionAbove10m": 0.23314833105352117
-      },
-      "rgb": "assets/geo_mixed_00_500402-rgb.png",
-      "height": "assets/geo_mixed_00_500402-height.png",
-      "groundTruth": "assets/geo_mixed_00_500402-groundTruth.png",
-      "thumbnail": "assets/geo_mixed_00_500402-thumb.webp"
     }
   ]
 }

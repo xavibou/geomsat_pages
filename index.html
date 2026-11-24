@@ -5,7 +5,7 @@
 <meta name="description" content="GeomSat: Learning Geometric-Aware Representations for Very High Resolution Satellite Imagery. Paper, dataset, and geometric learning examples.">
 <meta name="theme-color" content="#ffffff">
 <title>GeomSat: Learning Geometric-Aware Representations for Very High Resolution Satellite Imagery</title>
-<link rel="stylesheet" href="style.css?v=dakar-v2"><script src="app.js?v=dakar-v2" defer></script>
+<link rel="stylesheet" href="style.css?v=paper-v3"><script src="app.js?v=paper-v3" defer></script>
 </head>
 <body>
 <a class="skip" href="#explore">Skip to interactive results</a>
@@ -17,10 +17,10 @@
 <div class="paper-links" aria-label="Paper resources"><a class="placeholder" role="link" aria-disabled="true" title="arXiv link will be added when available">arXiv <span>(coming soon)</span></a><a class="placeholder" role="link" aria-disabled="true" title="Code link will be added when available">Code <span>(coming soon)</span></a></div>
 </header>
 <section id="teaser" class="teaser-section wrap" aria-label="Paper teaser">
-<figure><a href="assets/teaser.png" target="_blank" rel="noopener"><img src="assets/teaser.png" width="1800" height="823" alt="Paper teaser: reconstructed surfaces, satellite input views, and predicted heights for the Arc de Triomphe in Paris and Maracanã Stadium in Rio de Janeiro"></a><figcaption>Monocular height predictions and multiview surface reconstructions for the Arc de Triomphe, Paris, and Maracanã Stadium, Rio de Janeiro. The original teaser uses an earlier checkpoint than the interactive examples below.</figcaption></figure>
+<figure><a href="assets/teaser.png" target="_blank" rel="noopener"><img src="assets/teaser.png" width="1800" height="823" alt="Paper teaser: reconstructed surfaces, satellite input views, and predicted heights for the Arc de Triomphe in Paris and Maracanã Stadium in Rio de Janeiro"></a><figcaption>Monocular height predictions and multiview surface reconstructions for the Arc de Triomphe, Paris, and Maracanã Stadium, Rio de Janeiro.</figcaption></figure>
 </section>
 <section id="explore" class="explore-section"><div class="wrap">
-<div class="section-heading"><h2>Monocular height estimation</h2><p>Select an urban area to compare its satellite image and predicted height. Click either panel to view it at full resolution.</p></div>
+<div class="section-heading"><h2>Monocular height estimation</h2><p>Select an observation to visualize its satellite image and predicted height.</p></div>
 <div id="thumbnails" class="filmstrip" aria-label="Select a test scene"><p>Loading test scenes…</p></div>
 <div id="comparison" class="comparison-panels">
 <figure class="demo-panel"><figcaption>Satellite image</figcaption><a id="input-full" target="_blank" rel="noopener" title="Open full-resolution satellite image"><img id="observation" width="512" height="512" alt="Satellite observation"></a></figure>
@@ -32,7 +32,7 @@
 </div></section>
 <section id="dataset" class="paper-section wrap">
 <h2>The GeomSat dataset</h2>
-<p>GeomSat brings together very-high-resolution satellite observations of the same scenes from different viewpoints. Co-visible image pairs support geometric representation learning through cross-view reconstruction. The dataset includes an initial collection, sites across France, and sites worldwide.</p>
+<p>GeomSat is built using a geographically distributed dataset composed of very-high-resolution satellite observations of the same scenes from different viewpoints</p>
 <figure><a href="assets/image-distribution.pdf" target="_blank" rel="noopener"><img src="assets/image-distribution.png" width="2000" height="885" loading="lazy" alt="Geographical distribution of GeomSat satellite products worldwide, a detailed map of France, and a histogram of incidence angles"></a><figcaption>Spatial distribution of the satellite imagery and diversity of viewing angles. Marker size indicates the number of products; the inset shows locations in France. Select the figure to open the PDF.</figcaption></figure>
 </section>
 <section id="matching" class="paper-section wrap">
