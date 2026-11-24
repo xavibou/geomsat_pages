@@ -23,23 +23,23 @@
   },
   "scenes": [
     {
-      "id": "mosaic_rio",
-      "title": "Rio de Janeiro \u00b7 Maracan\u00e3",
-      "region": "Brazil",
+      "id": "mosaic_dakar",
+      "title": "Dakar \u00b7 urban neighbourhood",
+      "region": "Senegal",
       "kind": "mosaic",
       "groundTruthAvailable": false,
-      "nativeWidth": 1536,
-      "nativeHeight": 1536,
-      "approximateSideM": 772.9,
+      "nativeWidth": 1664,
+      "nativeHeight": 1664,
+      "approximateSideM": 825.7,
       "splitStatus": "pre-training train/validation site",
-      "sourceWindowSha256": "f397d05fe8050b7d799d9d67d2289ba416c27eeb1bd2e8f371a50f5e5c9538b6",
-      "sourceAssetSha256": "d4163ac81bf88801d9bc47194fcb3abf116807688a2ebe36cc512ede676ecdf5",
+      "sourceWindowSha256": "12c55070812adcffab21fda0f1a1454ae83faab1e8f9eb158dbc3307783f896a",
+      "sourceAssetSha256": "fe9228014ded53cee24cc35632c90d92c45edf0ac0e0a551e1dbfecd8dfa99e8",
       "tileSize": 512,
       "tileStride": 384,
       "tileCount": 16,
-      "rgb": "assets/mosaic_rio-rgb.png",
-      "height": "assets/mosaic_rio-height.png",
-      "thumbnail": "assets/mosaic_rio-thumb.webp"
+      "rgb": "assets/mosaic_dakar-rgb.png",
+      "height": "assets/mosaic_dakar-height.png",
+      "thumbnail": "assets/mosaic_dakar-thumb.webp"
     },
     {
       "id": "mosaic_france_residential",
@@ -137,25 +137,6 @@
       "thumbnail": "assets/mosaic_libreville-thumb.webp"
     },
     {
-      "id": "mosaic_dakar",
-      "title": "Dakar \u00b7 urban neighbourhood",
-      "region": "Senegal",
-      "kind": "mosaic",
-      "groundTruthAvailable": false,
-      "nativeWidth": 1664,
-      "nativeHeight": 1664,
-      "approximateSideM": 825.7,
-      "splitStatus": "pre-training train/validation site",
-      "sourceWindowSha256": "12c55070812adcffab21fda0f1a1454ae83faab1e8f9eb158dbc3307783f896a",
-      "sourceAssetSha256": "fe9228014ded53cee24cc35632c90d92c45edf0ac0e0a551e1dbfecd8dfa99e8",
-      "tileSize": 512,
-      "tileStride": 384,
-      "tileCount": 16,
-      "rgb": "assets/mosaic_dakar-rgb.png",
-      "height": "assets/mosaic_dakar-height.png",
-      "thumbnail": "assets/mosaic_dakar-thumb.webp"
-    },
-    {
       "id": "mosaic_tehran",
       "title": "Tehran \u00b7 urban neighbourhood",
       "region": "Iran",
@@ -173,25 +154,6 @@
       "rgb": "assets/mosaic_tehran-rgb.png",
       "height": "assets/mosaic_tehran-height.png",
       "thumbnail": "assets/mosaic_tehran-thumb.webp"
-    },
-    {
-      "id": "mosaic_paris_south",
-      "title": "Paris \u00b7 residential neighbourhood",
-      "region": "France",
-      "kind": "mosaic",
-      "groundTruthAvailable": false,
-      "nativeWidth": 1536,
-      "nativeHeight": 1536,
-      "approximateSideM": 819.8,
-      "splitStatus": "pre-training train/validation site",
-      "sourceWindowSha256": "678a83d8e08faed3eb000997a645ef437aafb907b7a38b5fb5d7143df7a76e66",
-      "sourceAssetSha256": "e4269debe5c8f9d99b2fedaf64563c604bf13f31a35c0599cbea36d9b65d5592",
-      "tileSize": 512,
-      "tileStride": 384,
-      "tileCount": 16,
-      "rgb": "assets/mosaic_paris_south-rgb.png",
-      "height": "assets/mosaic_paris_south-height.png",
-      "thumbnail": "assets/mosaic_paris_south-thumb.webp"
     },
     {
       "id": "mosaic_paris_north",
@@ -245,23 +207,6 @@
       "height": "assets/geo_mixed_00_500402-height.png",
       "groundTruth": "assets/geo_mixed_00_500402-groundTruth.png",
       "thumbnail": "assets/geo_mixed_00_500402-thumb.webp"
-    },
-    {
-      "id": "geo_canopy_00_384998",
-      "title": "Forest canopy",
-      "region": "France",
-      "size": 512,
-      "sourceAssetSha256": "f9c2ff70604cda195d22259d05e273170b8cffe69dc4676b989aa283b1bfbd9b",
-      "groundTruthAvailable": true,
-      "referenceStatistics": {
-        "validFraction": 0.9993171691894531,
-        "fractionAbove5m": 0.991956940812704,
-        "fractionAbove10m": 0.9509858187162408
-      },
-      "rgb": "assets/geo_canopy_00_384998-rgb.png",
-      "height": "assets/geo_canopy_00_384998-height.png",
-      "groundTruth": "assets/geo_canopy_00_384998-groundTruth.png",
-      "thumbnail": "assets/geo_canopy_00_384998-thumb.webp"
     }
   ]
 }

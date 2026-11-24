@@ -30,14 +30,15 @@ The interactive gallery uses the frozen 150k DPT model with normal-loss weight 0
 
 ## Demo scenes
 
-The demo shows ten native large-area mosaics, each approximately 800 m per side:
+The demo shows eight native large-area mosaics, each approximately 800 m per side:
 
-- Ordinary Paris neighbourhoods (two areas).
+- Paris urban blocks.
 - Collioure, Rochefort, Arcachon, and La Baule, from France test sites.
-- Rio de Janeiro: the Maracanã area from the teaser.
 - Ordinary urban areas in Libreville, Dakar, and Tehran, avoiding the Eiffel/Azadi Tower examples.
 
-The three original ground-truth test crops remain available at the end of the thumbnail strip. Their output can switch between prediction and aligned LiDAR ground truth. Mosaics have no aligned full-area GT, so they show prediction only. Click an image to open its full-resolution PNG.
+The two ground-truth test crops remain available at the end of the thumbnail strip. Their output can switch between prediction and aligned LiDAR ground truth. Mosaics have no aligned full-area GT, so they show prediction only. Click an image to open its full-resolution PNG.
+
+Dakar is the default scene. The Rio, Paris residential, and forest-canopy demo examples are excluded. The paper teaser is retained.
 
 ## Native tiling and provenance
 
@@ -47,4 +48,4 @@ Inference uses overlapping 512 × 512 tiles at 384 px stride with the frozen 150
 
 Four non-Paris France mosaics are verified members of the pre-training test split. Some Paris/world scenes are pre-training train/validation sites; these illustrative examples are not claimed as geographically unseen evaluations. Exact image sizes, approximate extents, acquisition split status, tile counts, and model/source hashes are recorded in `scenes.json`. The original teaser uses an earlier checkpoint.
 
-The three retained GT crops were selected using reference heights only: >=80% valid ground truth, >=20% of valid heights above 5 m, and >=5% above 10 m. Selection does not rank prediction accuracy.
+The two retained GT crops were selected using reference heights only: >=80% valid ground truth, >=20% of valid heights above 5 m, and >=5% above 10 m. Selection does not rank prediction accuracy.

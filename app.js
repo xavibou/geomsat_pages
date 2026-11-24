@@ -65,7 +65,7 @@ document.querySelectorAll('[data-output]').forEach(button => button.addEventList
   output = button.dataset.output;
   if (requested || selected) selectScene(requested || selected);
 }));
-fetch('scenes.json').then(response => {
+fetch('scenes.json?v=dakar-v2').then(response => {
   if (!response.ok) throw new Error('Could not load test scenes');
   return response.json();
 }).then(data => { scenes = data.scenes; renderThumbnails(); }).catch(error => {
